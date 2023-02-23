@@ -1,0 +1,18 @@
+<div class="row" [ngClass]="{'completed': item.completed}" class="col-12 d-flex flex-row justify-content-between">
+    <div class="name" class="">
+        <input type="checkbox" [checked]="item.completed" (change)="toogle()">
+        {{item.name}}
+    </div>
+    <div class="price">
+        {{item.price | currency}}
+    </div>
+    <div class="quantity">
+        {{item.quantity}}
+    </div>
+    <div class="total">
+        {{item.price * item.quantity | currency}}
+    </div>
+    <div class="eliminar">
+        <button (click)="eliminar()" class="btn btn-danger">Eliminar</button>
+    </div>
+</div>

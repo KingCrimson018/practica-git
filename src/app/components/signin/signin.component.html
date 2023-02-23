@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center ">
+    <form class="form col-8 d-flex flex-column align-content-center" (submit)="signIn()">
+        <div>
+            <input type="email" name="email" placeholder="Enter Email" [(ngModel)]="email" class="form-control m-2 p-2">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="password" class="m-2 p-2 form-control">
+        </div>
+         <div class="d-flex justify-content-between">
+            <input type="submit" value="Sign In" class="btn btn-primary col-5 m-2 p-2">
+            <button class="btn btn-secondary col-5  m-2 p-2" (click)="googleSignIn()">Sign In With Google</button>
+         </div>
+    </form>
+</div>
